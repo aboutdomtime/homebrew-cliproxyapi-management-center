@@ -1,10 +1,10 @@
 class CliproxyapiManagementCenter < Formula
   desc "Static Web UI for managing CLI Proxy API"
   homepage "https://github.com/router-for-me/Cli-Proxy-API-Management-Center"
-  url "https://github.com/router-for-me/Cli-Proxy-API-Management-Center/releases/download/v1.27.0/management.html",
+  url "https://github.com/router-for-me/Cli-Proxy-API-Management-Center/releases/download/v1.27.2/management.html",
       using: :nounzip
-  version "1.27.0"
-  sha256 "2ca7a226f8d2fa078fb52e12fd5b75762ded2dc585205d3da509ebfb17ea2adf"
+  version "1.27.2"
+  sha256 "2f6cf57a8ca4ace1fadde0280cbd41084f56999738d0e692a30b135420f7fc30"
   license "MIT"
 
   depends_on "python@3.14"
@@ -23,7 +23,7 @@ class CliproxyapiManagementCenter < Formula
 
       case "${1:-}" in
         --version|-v)
-          echo "1.27.0"
+          echo "1.27.2"
           exit 0
           ;;
         --path)
@@ -60,7 +60,7 @@ class CliproxyapiManagementCenter < Formula
       root="#{opt_share}/cliproxyapi-management-center"
       url="http://127.0.0.1:${port}/management.html"
 
-      echo "Serving cliproxyapi-management-center 1.27.0 at ${url}"
+      echo "Serving cliproxyapi-management-center 1.27.2 at ${url}"
       echo "Press Ctrl-C to stop."
       command -v open >/dev/null 2>&1 && open "${url}" >/dev/null 2>&1 || true
       cd "${root}"
